@@ -1,0 +1,12 @@
+<h2>Name: <%= @restaurant.name %></h2>
+<h2>Address: <%= @restaurant.address %></h2>
+<h2>Category: <%= @restaurant.category %></h2>
+<% @restaurant.reviews.each do |resto| %>
+  <p><%= resto.content %></p>
+<% end %>
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+<br>
+<%= link_to "Delete this motherfucker", restaurant_path, method: :delete, data: { confirm: "Are you mad?" } %>
+<br>
+<%= link_to "You are tired, go home", restaurants_path %>
+
