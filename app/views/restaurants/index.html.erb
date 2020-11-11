@@ -1,6 +1,6 @@
 <ul>
   <% @restaurants.each do |resto| %>
-    <li><%= link_to resto.name, restaurant_path(resto) %></li>
+    <li><%= link_to resto.name, restaurant_path(resto) %> <%= link_to "❌Delete", restaurant_path(resto), method: :delete, data: { confirm: "sure?" } %></li>
   <% end %>
   <%= link_to "Add a new restaurant", new_restaurant_path %>
 </ul>

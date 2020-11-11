@@ -2,7 +2,7 @@
 <h2>Address: <%= @restaurant.address %></h2>
 <h2>Category: <%= @restaurant.category %></h2>
 <% @restaurant.reviews.each do |resto| %>
-  <p><%= resto.content %></p>
+  <p><%= resto.content %> | <%= resto.rating %></p>
 <% end %>
 <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
 <br>
